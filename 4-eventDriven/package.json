@@ -1,0 +1,39 @@
+{
+  "name": "domain-modeling",
+  "type": "module",
+  "module": "index.ts",
+  "scripts": {
+    "lint": "eslint \"**/*.@(ts|mts|js|cjs|mjs)\"",
+    "lint:fix": "npm run lint -- --fix",
+    "start:ts": "bun index.ts",
+    "start:ts:debug": "bun --inspect-brk index.ts",
+    "test": "bun test unit",
+    "test:e2e": "bun test e2e --preload ./tests/e2eTestsSetup.ts",
+    "test:e2e:watch": "bun test e2e --preload ./tests/e2eTestsSetup.ts --watch",
+    "test:infra": "bun test infra --preload ./tests/infraTestsSetup.ts",
+    "test:watch": "bun test unit --watch"
+  },
+  "dependencies": {
+    "clone": "^2.1.2",
+    "fastify": "^4.25.0",
+    "lodash.isequal": "^4.5.0",
+    "p-retry": "^6.1.0",
+    "pg": "^8.11.3",
+    "redis": "^4.6.11",
+    "reflect-metadata": "^0.2.0",
+    "typeorm": "^0.3.17",
+    "umzug": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/clone": "^2.1.4",
+    "@types/lodash.isequal": "^4.5.8",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "bun-types": "1.0.17",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "typescript": "5.3.3"
+  }
+}

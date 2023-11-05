@@ -1,0 +1,33 @@
+{
+  "name": "domain-modeling",
+  "type": "module",
+  "module": "index.ts",
+  "scripts": {
+    "lint": "eslint \"**/*.@(ts|mts|js|cjs|mjs)\"",
+    "lint:fix": "npm run lint -- --fix",
+    "start:ts": "bun index.ts",
+    "start:ts:debug": "bun --inspect-brk=4000 index.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "clone": "^2.1.2",
+    "fastify": "^4.25.0",
+    "knex": "3.1.0",
+    "lodash.isequal": "^4.5.0",
+    "pg": "^8.11.3",
+    "umzug": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/clone": "^2.1.4",
+    "@types/lodash.isequal": "^4.5.8",
+    "@types/pg": "^8.10.9",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "bun-types": "1.0.17",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "typescript": "5.3.3"
+  }
+}
